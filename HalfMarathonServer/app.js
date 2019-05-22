@@ -4,17 +4,61 @@ const cors = require('cors')
 const models = require('./models')
 const bodyParser = require('body-parser')
 const PORT = 8080
+const jwt = require('jsonwebtoken')
 
 app.use(bodyParser.json())
 app.use(cors())
 
-let users = [{firstname:'Alpa', lastname:'Mehta', emailaddress:'apmk_27@yahoo.com', 
-streetaddress:'6827 Richmond Ave'}]
+// let users = [{firstname:'Alpa', lastname:'Mehta', emailaddress:'apmk_27@yahoo.com', 
+// streetaddress:'6827 Richmond Ave'}]
+
+app.post('/login',(req, res) => {
+  console.log(req.body)
+
+  let emailaddress = req.body.emailaddress
+  let password = req.body.password
+  
+  models.UserProfile.findOne({
+    where : {
+      emailaddress: emailaddress,
+      password : password
+    }
+    }).then((user) => {
+      if (user)
+
+      jwt.sign({ emailaddress: emailaddress}, 'secret', function(err, token) {
+  
+        if(token) {
+          console.log(token)
+          res.json({token: token})
+        } else {
+          res.status(500).json({message: 'Unable to generate token'})
+        }
+
+
+    })
+    
+
+  });
+
+  })
+//   }).then((user) => {
+//     if(user) {
+      
+//       res.json(user)
+//     }
+//     else {
+//       res.json('error')
+//     }
+//   })
+
+// })
+
 
 app.get('/api/userprofiles',(req,res)=> {
     models.UserProfile.findAll()
     .then((userprofiles) => res.json(userprofiles))
-   
+    console.log(username)
     
  } )
 

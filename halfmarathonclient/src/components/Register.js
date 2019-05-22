@@ -52,9 +52,9 @@ export class Register extends Component{
 }).then(response => response.json())
 .then(result => {
   if(result.success) {
-    console.log('success')
+    //console.log('success')
     //   this.populateAllBooks
-  // this.props.history.push('/login')
+  this.props.history.push('/login')
   }
 })
 

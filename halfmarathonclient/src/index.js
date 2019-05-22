@@ -6,20 +6,30 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Switch, Route} from 'react-router-dom'
 import {BaseLayout} from './components/BaseLayout'
 import {Register} from './components/Register'
-// import {ViewAllReceipe} from './components/ViewAllReceipe'
+import Login from './components/Login'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './store/reducer'
+
+const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+
 // import {HomePage} from './components/HomePage'
 
 ReactDOM.render(
+<Provider store={store}>
     <BrowserRouter>
     <BaseLayout>
     <Switch>
     {/* <Route path="/" exact component={HomePage} /> */}
-    <Route path="/" component={Register} />
+    <Route exact path="/" component={Register} />
+    <Route path="/login" component={Login} />
     {/* <Route path="/add-receipe" component={AddReceipe} /> */}
 
      </Switch>
     </BaseLayout>
     </BrowserRouter>
+</Provider>
 
 
 
