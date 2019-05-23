@@ -10,22 +10,35 @@ import Login from './components/Login'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from './store/reducer'
-
+import {HomePage} from './components/HomePage'
+import Schedule from './components/Schedule'
+import {BlueSchedule}from './components/BlueSchedule'
+import {GreenSchedule}from './components/GreenSchedule'
+import {YellowSchedule}from './components/YellowSchedule'
+import RedSchedule from './components/RedSchedule'
+import {OrangeSchedule}from './components/OrangeSchedule'
+import {PurpleSchedule}from './components/PurpleSchedule'
 const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
-// import {HomePage} from './components/HomePage'
+
 
 ReactDOM.render(
 <Provider store={store}>
     <BrowserRouter>
     <BaseLayout>
     <Switch>
-    {/* <Route path="/" exact component={HomePage} /> */}
-    <Route exact path="/" component={Register} />
+    <Route path="/" exact component={HomePage} />
+    
+    <Route exact path="/Register" component={Register} />
     <Route path="/login" component={Login} />
-    {/* <Route path="/add-receipe" component={AddReceipe} /> */}
-
+    <Route path="/schedule" component={Schedule} /> */}
+    <Route path="/BlueSchedule" component={BlueSchedule} />
+    <Route path="/GreenSchedule" component={GreenSchedule} />
+    <Route path="/YellowSchedule" component={YellowSchedule} />
+    <Route path="/RedSchedule" component={RedSchedule} />
+    <Route path="/OrangeSchedule" component={OrangeSchedule} />
+    <Route path="/PurpleSchedule" component={PurpleSchedule} />
      </Switch>
     </BaseLayout>
     </BrowserRouter>

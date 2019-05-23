@@ -9,6 +9,29 @@ const jwt = require('jsonwebtoken')
 app.use(bodyParser.json())
 app.use(cors())
 
+function authenticate(req,res, next) {
+
+  let headers = req.headers["authorization"]
+  // Bearer token
+  // after the split
+  // [0] Bearer
+  // [1] token
+  let token = headers.split(' ')[1]
+
+  jwt.verify(token,'secret',(err, decoded) => {
+    if(decoded) {
+      if(decoded.username) {
+        next()
+      } else {
+        res.status(401).json({message: 'Token invalid'})
+      }
+    } else {
+      res.status(401).json({message: 'Token invalid'})
+    }
+  })
+
+}
+
 // let users = [{firstname:'Alpa', lastname:'Mehta', emailaddress:'apmk_27@yahoo.com', 
 // streetaddress:'6827 Richmond Ave'}]
 
@@ -55,10 +78,10 @@ app.post('/login',(req, res) => {
 // })
 
 
-app.get('/api/userprofiles',(req,res)=> {
+app.get('/api/userprofiles', (req,res)=> {
     models.UserProfile.findAll()
     .then((userprofiles) => res.json(userprofiles))
-    console.log(username)
+    //console.log(username)
     
  } )
 

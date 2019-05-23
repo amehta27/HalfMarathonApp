@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import axios from 'axios'
-// import { setAuthenticationHeader } from '../utils/authenticate'
+
+import { setAuthenticationHeader } from '../utils/authenticate'
 import { connect } from 'react-redux'
 
 class Login extends Component {
@@ -25,9 +25,17 @@ class Login extends Component {
       // save the token in local storage
             localStorage.setItem('jsonwebtoken',token)
             this.props.onAuthenticated(token)
+
+            setAuthenticationHeader(token)
             
         
           }).catch(error => console.log(error))
+
+        //   if(result.success) {
+            //console.log('success')
+            //   this.populateAllBooks
+          this.props.history.push('/schedule')
+        //   }
 
 
     }
@@ -46,7 +54,7 @@ class Login extends Component {
         <input name="emailaddress" onChange={this.handleTextBoxChange} placeholder='login'></input>
         <input name="password" onChange={this.handleTextBoxChange} placeholder='password'></input>
         <button onClick={this.handleLoginClick}>Login</button>
-          <button onClick={this.handleHelloClick}>Say Hello</button>
+          
         </div>
 
             // <h1>login</h1>
