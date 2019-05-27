@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav,Navbar,Form,FormControl,Col,Button,Table} from 'react-bootstrap'
 import Schedule  from './Schedule'
+import './Schedule.css';
 import { withRouter } from "react-router";
 class RedSchedule extends Component {
 
@@ -9,10 +10,11 @@ class RedSchedule extends Component {
 
 render(){
   return(
-  <div>
+  <div className="redschedulestyling">
      <Schedule /> 
-  <h1>Red Group - 11 to 12 mins per mile</h1>
-  <Table>
+  <h5>Red Group - 11 to 12 mins per mile(bottom line is to finish the run by 8am)</h5>
+  <br></br>
+  <Table className="redbackgroungcolor">
   <thead>
     <tr>
       <th>weekly Schedule</th>

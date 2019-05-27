@@ -83,7 +83,7 @@ export class Register extends Component{
       
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>lastname</Form.Label>
-            <Form.Control type="password" name ="lastname"placeholder="lastname" onChange={this.handleTextChange} />
+            <Form.Control type="lastname" name ="lastname"placeholder="lastname" onChange={this.handleTextChange} />
           </Form.Group>
         </Form.Row>
         <Form.Group controlId="formGridAddress1">
@@ -102,7 +102,8 @@ export class Register extends Component{
             <Form.Label>State</Form.Label>
             <Form.Control as="select" name ="state"onChange={this.handleTextChange}>
               <option>Choose...</option>
-              <option>...</option>
+              <option>Tx</option>
+              {/* <option></option> */}
             </Form.Control>
           </Form.Group>
       
@@ -148,7 +149,7 @@ export class Register extends Component{
         </Form.Row>
 
        
-        <Button variant="primary" type="submit" onClick= {this.handleSaveClick}>
+        <Button variant="primary" className="btncolor" type="submit" onClick= {this.handleSaveClick}>
           Submit
         </Button>
       </Form>

@@ -5,11 +5,13 @@ const initialState = {
 
 
 const reducer = (state = initialState, action) => {
+  
     switch(action.type) {
         case 'ON_AUTHENTICATED':
+
           return {
             ...state, // spread operator
-            isAuthenticated: action.token != null ? true : false
+            isAuthenticated: true
           }
         }
     return state

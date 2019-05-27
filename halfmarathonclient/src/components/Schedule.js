@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Nav,Navbar,Form,FormControl,Col,Button} from 'react-bootstrap'
 import { withRouter } from "react-router";
-
+import './Schedule.css';
 
 class Schedule extends Component {
   constructor(){
@@ -49,7 +49,7 @@ class Schedule extends Component {
    render (){
 
        return(
-        <div>
+        <div className= "schedulestyling">
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>Color Group</Form.Label>
           <Form.Control as="select" name ="colorgroup"onChange={this.handleTextChange}>

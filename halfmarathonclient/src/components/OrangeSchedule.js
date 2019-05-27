@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav,Navbar,Form,FormControl,Col,Button,Table} from 'react-bootstrap'
-
+import Schedule  from './Schedule'
+import './Schedule.css';
 export class OrangeSchedule extends Component {
 
 
@@ -8,9 +9,11 @@ export class OrangeSchedule extends Component {
 
 render(){
   return(
-  <div>
-  <h1>Red Group - 12 to 14 mins per mile</h1>
-  <Table>
+  <div className="oreangeschedulestyling">
+  <Schedule />
+  <h5>Orange Group - 12 to 14 mins per mile(bottom line is to finish the run by 8am)</h5>
+  <br></br>
+  <Table className="orangebackgroungcolor">
   <thead>
     <tr>
       <th>weekly Schedule</th>
