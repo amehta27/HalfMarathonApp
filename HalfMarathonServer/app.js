@@ -36,6 +36,9 @@ function authenticate(req,res, next) {
 // let users = [{firstname:'Alpa', lastname:'Mehta', emailaddress:'apmk_27@yahoo.com', 
 // streetaddress:'6827 Richmond Ave'}]
 
+app.get
+
+
 app.post('/login',(req, res) => {
   console.log(req.body)
 

@@ -9,55 +9,77 @@
 
 .blueschedulestyling{
     margin-left: 25%;
-    margin-right: 25%;  
+    margin-right: 25%; 
+    color : whitesmoke; 
     
 
 }
 
 .bluebackgroungcolor{
-    background-color: blue
+    background-color: blue;
+    color : whitesmoke; 
 }
 .greenschedulestyling{
     margin-left: 25%;
     margin-right: 25%;  
+    color : whitesmoke; 
+    
 }
 
 .greenbackgroungcolor{
-    background-color: green
+    background-color: green;
+    color : whitesmoke; 
+    
 }
 
 .yellowschedulestyling{
     margin-left: 25%;
-    margin-right: 25%;  
+    margin-right: 25%;
+    
+      
 }
 
 .yellowbackgroungcolor{
-    background-color: yellow
+    background-color: yellow;
+    
+    
 }
 
 .redschedulestyling{
     margin-left: 25%;
-    margin-right: 25%;  
+    margin-right: 25%; 
+    color : whitesmoke; 
+     
 }
 
 .redbackgroungcolor{
-    background-color: red
+    background-color: red;
+    color : whitesmoke; 
+    
 }
 
 .oreangeschedulestyling{
     margin-left: 25%;
-    margin-right: 25%;  
+    margin-right: 25%; 
+    color : whitesmoke; 
+     
 }
 
 .orangebackgroungcolor{
     background-color: orange;
+    color : whitesmoke; 
+    
 }
 
 .purpleschedulestyling{
     margin-left: 25%;
     margin-right: 25%;  
+    color : whitesmoke; 
+    
 }
 
 .purplebackgroungcolor{
     background-color: purple;
+    color : whitesmoke; 
+    
 }

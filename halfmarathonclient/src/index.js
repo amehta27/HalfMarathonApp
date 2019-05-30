@@ -10,7 +10,7 @@ import Login from './components/Login'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from './store/reducer'
-import {HomePage} from './components/HomePage'
+import HomePage from './components/HomePage'
 import Schedule from './components/Schedule'
 import {BlueSchedule}from './components/BlueSchedule'
 import {GreenSchedule}from './components/GreenSchedule'
@@ -18,6 +18,8 @@ import {YellowSchedule}from './components/YellowSchedule'
 import RedSchedule from './components/RedSchedule'
 import {OrangeSchedule}from './components/OrangeSchedule'
 import {PurpleSchedule}from './components/PurpleSchedule'
+import Weather from './components/Weather'
+import Nutrition from './components/Nutrition'
 const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
@@ -39,6 +41,8 @@ ReactDOM.render(
     <Route path="/RedSchedule" component={RedSchedule} />
     <Route path="/OrangeSchedule" component={OrangeSchedule} />
     <Route path="/PurpleSchedule" component={PurpleSchedule} />
+    <Route path="/Weather" component={Weather} />
+    <Route path="/Nutrition" component={Nutrition} />
      </Switch>
     </BaseLayout>
     </BrowserRouter>

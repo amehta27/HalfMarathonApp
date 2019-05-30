@@ -1,0 +1,16 @@
+.weatherstyling{
+
+    margin-top : 10%;
+    margin-left: 35%;
+    margin-right: 35%;
+    width : 500px;
+    height : 500px;
+    text-align: justify;
+}
+
+
+.weatherstylingbox{
+    width : 300px;
+    height : 400px;
+    text-align:justify;
+}

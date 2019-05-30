@@ -21,6 +21,9 @@ export class Menu extends Component {
               <Nav.Link href="/Register" className="textcolor">Register</Nav.Link>
               <Nav.Link href="/login" className="textcolor">Login</Nav.Link>
               <Nav.Link href="/schedule" className="textcolor">View Schedule</Nav.Link>
+              <Nav.Link href="/Weather" className="textcolor">Weather</Nav.Link>
+              <Nav.Link href="/Nutrition" className="textcolor">Nutrition Facts</Nav.Link>
+              
             </Nav>
           </Navbar.Collapse>
         </Navbar>
